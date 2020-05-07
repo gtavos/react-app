@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container } from 'reactstrap'
 import { Switch, Route } from 'react-router'
-import { Home } from '../../../shared/components'
-
+import { Home, ModalExample } from '../../../shared/components'
+import './main.css'
 
 const MainRouter = () => (
   <Container className="main-content">
@@ -10,6 +10,9 @@ const MainRouter = () => (
       <Route exact path="/" component={Home} />
       <Route path="/render-pdf" component={tempRenderPdf} />
       <Route path="/upload-file" component={tempUploadFile} />
+      <Route path="/modal" 
+        render={(props) => <ModalExample {...props} buttonLabel={"Try this modal"} />}
+      />
     </Switch>
   </Container>
 )
