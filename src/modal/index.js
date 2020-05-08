@@ -17,6 +17,7 @@ const ModalExample = (props) => {
       <Form inline onSubmit={(e) => e.preventDefault()}>
         {' '}
         <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
+        <label>Modal value:{modal.toString()}</label>
       </Form>
       <Modal isOpen={modal} toggle={toggle} className={className} backdrop={backdrop} keyboard={keyboard}>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
