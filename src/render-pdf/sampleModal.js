@@ -17,7 +17,6 @@ class SampleModalPDF extends Component {
   constructor () {
     super();
     this.state = {
-      file: null,
       pdfPreviewUrl: null,
       numPages: null,
       modal : false,
@@ -41,9 +40,17 @@ class SampleModalPDF extends Component {
       });
     }
  
-    reader.readAsDataURL(event.target.files[0])
+    if(event.target.files[0] != undefined){
+      reader.readAsDataURL(event.target.files[0]);
+      this.toggle();
+    }
+  }
+
+  onClose = event => {
+    this.setState({
+      pdfPreviewUrl: null
+    });
     this.toggle();
-    event.target.value = null;//clean up to choose same file
   }
 
   onDocumentLoadSuccess = ({ numPages }) => {
@@ -96,7 +103,7 @@ class SampleModalPDF extends Component {
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-          <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          <Button color="secondary" onClick={this.onClose}>Cancel</Button>
         </ModalFooter>
         </Modal>
 
