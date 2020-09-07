@@ -7,6 +7,7 @@ const NavMenu = () => (
     <MenuItem route="/render-pdf-modal">Render Modal PDF</MenuItem>
     <MenuItem route="/upload-file">Upload File</MenuItem>
     <MenuItem route="/modal">Modal</MenuItem>
+    <MenuItem route="/geolocation">Geolocation</MenuItem>
   </React.Fragment>
 )
 

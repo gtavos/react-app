@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'reactstrap'
 import { Switch, Route } from 'react-router'
-import { Home, ModalExample, SamplePDF, SampleModalPDF} from '../../../shared/components'
+import { Home, ModalExample, SamplePDF, SampleModalPDF, SampleGeolocation} from '../../../shared/components'
 import './main.css'
 
 const MainRouter = () => (
@@ -14,6 +14,7 @@ const MainRouter = () => (
       <Route path="/modal" 
         render={(props) => <ModalExample {...props} buttonLabel={"Try this modal"} />}
       />
+      <Route path="/geolocation" component={SampleGeolocation} />
     </Switch>
   </Container>
 )

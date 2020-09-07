@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { NavItem, NavLink } from 'reactstrap'
+import { NavItem } from 'reactstrap'
 import { NavLink as Link } from 'react-router-dom'
 
 const propTypes = {
@@ -11,9 +11,7 @@ const propTypes = {
 const MenuItem = ({ route, children }) => {
   return (
     <NavItem>
-      <NavLink>
         <Link to={route}>{children}</Link>
-      </NavLink>
     </NavItem>
   )
 }

@@ -40,7 +40,7 @@ class SampleModalPDF extends Component {
       });
     }
  
-    if(event.target.files[0] != undefined){
+    if(event.target.files[0] !== undefined){
       reader.readAsDataURL(event.target.files[0]);
       this.toggle();
     }

@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Container,
   Navbar,
-  NavbarBrand,
   NavbarToggler,
   Collapse,
   Nav,
@@ -19,9 +18,7 @@ const HeaderTemplate = ({
   <header className="header">
     <Container>
       <Navbar dark expand="md">
-        <NavbarBrand>
           <Link to="/">React App</Link>
-        </NavbarBrand>
 
         <NavbarToggler onClick={handleNavbarToggle} />
         <Collapse isOpen={isNavbarOpen} navbar>
